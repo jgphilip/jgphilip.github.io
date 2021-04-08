@@ -3,7 +3,7 @@ title:
 subtitle: 
 email: jgphilip@gmail.com
 description: AN ANDROID DEVELOPER<br /> FOOTBALL FANATIC
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl: / # the subpath of your site, e.g. /blog
 url: http://jgphilip.github.io
 author:
 street_address: Somewhere Road
