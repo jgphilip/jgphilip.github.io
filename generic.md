@@ -2,7 +2,7 @@
 layout: post
 title: About me
 description: Lorem ipsum dolor est
-image: assets/images/pic11.jpg
+image: assets/images/jgp_red_fort.jpeg
 nav-menu: true
 ---
 
