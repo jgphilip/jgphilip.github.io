@@ -1,4 +1,61 @@
 ---
-layout: home
-# Index page
+layout: default
 ---
+{% assign r = site.data.resume %}
+<main class="page">
+  <header class="hero" id="top">
+    <h1>{{ r.name }}</h1>
+    <p class="title">{{ r.title }}</p>
+    <p class="bio">{{ r.bio }}</p>
+    <nav class="contact" aria-label="Contact links">
+      <a href="mailto:{{ r.email }}">Email</a>
+      {% for l in r.links %}<a href="{{ l.url }}" rel="me noopener">{{ l.label }}</a>{% endfor %}
+    </nav>
+  </header>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <ol class="timeline">
+      {% for job in r.experience %}
+      <li>
+        <div class="row">
+          <h3>{{ job.role }} <span class="at">· {{ job.company }}</span></h3>
+          <span class="dates">{{ job.dates }}</span>
+        </div>
+        <p class="loc">{{ job.location }}</p>
+        <ul>{% for h in job.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+      </li>
+      {% endfor %}
+    </ol>
+    <h3 class="sub">Selected projects</h3>
+    <ul class="projects">
+      {% for p in r.projects %}<li><strong>{{ p.name }}</strong> — {{ p.description }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Tech Stack &amp; Skills</h2>
+    {% for g in r.skills %}
+    <div class="group">
+      <h3>{{ g.group }}</h3>
+      <ul class="tags">{% for i in g.items %}<li>{{ i }}</li>{% endfor %}</ul>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    {% for e in r.education %}
+    <div class="row"><h3>{{ e.title }} <span class="at">· {{ e.school }}</span></h3><span class="dates">{{ e.dates }}</span></div>
+    {% endfor %}
+    {% if r.certifications.size > 0 %}
+    <ul>{% for c in r.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
+    {% endif %}
+  </section>
+
+  <footer>
+    <p>Let's talk: <strong id="email">{{ r.email }}</strong></p>
+    <button type="button" class="copy" data-copy="{{ r.email }}" aria-live="polite">Copy email</button>
+    <p class="small">© {{ 'now' | date: '%Y' }} {{ r.name }}</p>
+  </footer>
+</main>
