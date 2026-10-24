@@ -2,7 +2,7 @@
 
 Minimalist single-page resume built with Jekyll and deployed to GitHub Pages.
 
-- Content: edit [`_data/resume.yml`](_data/resume.yml) (bio, experience, skills).
+- Content: edit [`_data/resume.yml`](_data/resume.yml) (bio, experience, skills, education).
 - Layout: [`_layouts/default.html`](_layouts/default.html) and [`index.html`](index.html).
 - Styles/scripts: `assets/css/resume.css`, `assets/js/resume.js`.
 

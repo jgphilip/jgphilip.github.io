@@ -4,9 +4,14 @@ bio: >-
   Android engineer with 13 years of experience designing, building and maintaining high-performance
   mobile apps in Kotlin and Jetpack Compose. I've cut ANRs and crashes by 40% on a 100k-user app,
   led a Java-to-Kotlin modernization, and use AI tooling to enforce clean architecture at team scale.
+email: jgphilip@gmail.com
 links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/jgphilip/
   - label: GitHub
     url: https://github.com/jgphilip
+  - label: Twitter
+    url: https://twitter.com/jgphilip
 
 experience:
   - role: Senior Android Engineer
@@ -59,3 +64,10 @@ skills:
     items: [MVVM, MVI, Clean Architecture, Material Design 3]
   - group: Tools
     items: [REST APIs, Jira, Trello, SonarQube, Jenkins, GitLab, GitHub]
+
+# TODO: fill in your degree and certifications
+education:
+  - title: Your Degree, Field of Study
+    school: Your University
+    dates: Year – Year
+certifications: []
