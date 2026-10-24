@@ -8,7 +8,6 @@ layout: default
     <p class="title">{{ r.title }}</p>
     <p class="bio">{{ r.bio }}</p>
     <nav class="contact" aria-label="Contact links">
-      <a href="mailto:{{ r.email }}">Email</a>
       {% for l in r.links %}<a href="{{ l.url }}" rel="me noopener">{{ l.label }}</a>{% endfor %}
     </nav>
   </header>
@@ -43,19 +42,7 @@ layout: default
     {% endfor %}
   </section>
 
-  <section id="education" aria-labelledby="edu-h">
-    <h2 id="edu-h">Education</h2>
-    {% for e in r.education %}
-    <div class="row"><h3>{{ e.title }} <span class="at">· {{ e.school }}</span></h3><span class="dates">{{ e.dates }}</span></div>
-    {% endfor %}
-    {% if r.certifications.size > 0 %}
-    <ul>{% for c in r.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
-    {% endif %}
-  </section>
-
   <footer>
-    <p>Let's talk: <strong id="email">{{ r.email }}</strong></p>
-    <button type="button" class="copy" data-copy="{{ r.email }}" aria-live="polite">Copy email</button>
     <p class="small">© {{ 'now' | date: '%Y' }} {{ r.name }}</p>
   </footer>
 </main>
